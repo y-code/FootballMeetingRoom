@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace FootballMeetingRoom.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class StrategyRoomController : Controller
     {
         // GET: StrategyRoom
