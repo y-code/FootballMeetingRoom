@@ -214,10 +214,17 @@
 		    radius: op.playerSize / 2,
 		    mouseover: getBall,
 		    dragstart: function (layer) {
+		        $board.animateLayer(layer.name, {
+		            strokeStyle: op.lineStyle,
+		            strokeWidth: op.lineWidth
+		        }, 250);
 		        $board.moveLayer($ball.name, 1000);
 		        $board.drawLayer($ball.name);
 		    },
 		    dragstop: function (layer) {
+		        $board.animateLayer(layer.name, {
+		            strokeWidth: 0
+		        }, 250);
 		        $board.moveLayer($ball.name, 1000);
 		        $board.drawLayer($ball.name);
 		        log("Player " + layer.name + " moved to (" + layer.x + ", " + layer.y + ")");
