@@ -5,7 +5,7 @@
 <div class="jumbotron">
     <h1>Football Meeting Room</h1>
     <p class="lead">Meet up with your team members anytime. <span style="color:orange">Understanding each other</span> leads your team to <span style="color:lightseagreen">victoreis</span>.</p>
-    <p>@Html.ActionLink("Learn more »", "About", "Home", new { @class = "btn btn-primary btn-lg" })</p>
+    <p>@Html.ActionLink("Learn more »", "About", "Home", new { }, new { @class = "btn btn-primary btn-lg" })</p>
 </div>
 
 <div class="row">
@@ -14,12 +14,12 @@
         <p>
             Register with your Facebook account, then you're in.
         </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        <p>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { @class = "btn btn-default" })</p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2>Strategy Room</h2>
+        <p></p>
+        <p>@Html.ActionLink("Strategy Room »", "Index", "StrategyRoom", new { }, new { @class = "btn btn-default" })</p>
     </div>
     <div class="col-md-4">
         <h2>Web Hosting</h2>

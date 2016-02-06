@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "Strategy Board";
+}
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/strategyboard")
+}
+
+<style>
+    #log {
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        height: 70px;
+        width: 100%;
+        background: #999;
+    }
+
+    /* IE 6 */
+    * html #log {
+        position: absolute;
+        top: expression((0-(footer.offsetHeight)+(document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight)+(ignoreMe = document.documentElement.scrollTop ? document.documentElement.scrollTop : document.body.scrollTop))+'px');
+    }
+
+    #log {
+        background-color: gray;
+        color: white;
+        overflow: auto;
+    }
+</style>
+
+<script>
+	$(function() {
+		$("canvas").footballBoard();
+
+	})
+</script>
+
+<h2>Football Strategy Board</h2>
+
+<canvas width="750px" height="1000px" style="border: 1px solid blue;"></canvas>
+<div id="log" style="">[ LOG ]</div>

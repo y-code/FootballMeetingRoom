@@ -79,3 +79,4 @@ C:\GitRepo\FootballMeetingRoom\FootballMeetingRoom\bin\Microsoft.Owin.Security.T
 C:\GitRepo\FootballMeetingRoom\FootballMeetingRoom\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\GitRepo\FootballMeetingRoom\FootballMeetingRoom\obj\Debug\FootballMeetingRoom.dll
 C:\GitRepo\FootballMeetingRoom\FootballMeetingRoom\obj\Debug\FootballMeetingRoom.pdb
+C:\GitRepo\FootballMeetingRoom\FootballMeetingRoom\obj\Debug\FootballMeetingRoom.csprojResolveAssemblyReference.cache

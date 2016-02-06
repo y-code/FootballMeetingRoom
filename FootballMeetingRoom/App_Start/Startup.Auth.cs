@@ -6,6 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using FootballMeetingRoom.Models;
+using System.Configuration;
 
 namespace FootballMeetingRoom
 {
@@ -55,8 +56,8 @@ namespace FootballMeetingRoom
             //   consumerSecret: "");
 
             app.UseFacebookAuthentication(
-               appId: "",
-               appSecret: "");
+               appId: ConfigurationManager.AppSettings["FacebookAppID"],
+               appSecret: ConfigurationManager.AppSettings["FacebookSecret"]);
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
