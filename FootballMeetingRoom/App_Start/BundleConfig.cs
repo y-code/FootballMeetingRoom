@@ -8,13 +8,13 @@ namespace FootballMeetingRoom
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            //bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-            //            "~/Scripts/jquery-{version}.js"));
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/bower_components/jquery/dist/jquery.min.js"));
+                        "~/Scripts/jquery-{version}.js"));
+            //bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+            //            "~/Scripts/bower_components/jquery/dist/jquery.min.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/jquery-ui").Include(
-                        "~/Scripts/bower_components/jquery-ui/jquery-ui.min.js"));
+            //bundles.Add(new ScriptBundle("~/bundles/jquery-ui").Include(
+            //            "~/Scripts/bower_components/jquery-ui/jquery-ui.min.js"));
 
             bundles.Add(new StyleBundle("~/bundles/jcanvas").Include(
                       "~/Scripts/bower_components/jcanvas/jcanvas.min.js"));
