@@ -43,7 +43,7 @@ namespace FootballMeetingRoom
             bundles.Add(new StyleBundle("~/bundles/strategyboard").Include(
                       "~/Scripts/StrategyBoard/strategyboard.js"));
 
-            BundleTable.EnableOptimizations = false;
+            //BundleTable.EnableOptimizations = false;
         }
     }
 }
