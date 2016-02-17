@@ -33,12 +33,15 @@
 
 <script>
 	$(function() {
-		$("canvas").footballBoard();
+	    $("canvas").constructFootballBoard({
+	        width: 500,
+            height: 600
+	    });
 
 	})
 </script>
 
 <h2>Football Strategy Board</h2>
 
-<canvas width="750px" height="1000px" style="border: 1px solid blue;"></canvas>
+<canvas></canvas>
 <div id="log" style="">[ LOG ]</div>
