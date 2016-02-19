@@ -238,7 +238,7 @@ var FootballBoard = function ($canvas, options) {
 	    draggable: true,
 	    bringToFront: true,
 	    groups: ['ball-owner'],
-	    fillStyle: '#ff0',
+	    fillStyle: '#999',
 	    x: this.$canvas.width() / 2, y: this.$canvas.height() / 2,
 	    radius: this.options.playerSize / 4,
 	    dragstart: function () {
@@ -364,41 +364,77 @@ $.fn.initializeFootballBoard = function (options) {
     fb.addTeamMate('tm3', fb.$canvas.width() / 2, fb.$canvas.height() / 2);
     fb.addTeamMate('tm4', fb.$canvas.width() / 2, fb.$canvas.height() / 2);
     fb.addTeamMate('tm5', fb.$canvas.width() / 2, fb.$canvas.height() / 2);
+    fb.addTeamMate('tm6', fb.$canvas.width() / 2, fb.$canvas.height() / 2);
+    fb.addTeamMate('tm7', fb.$canvas.width() / 2, fb.$canvas.height() / 2);
+    fb.addTeamMate('tm8', fb.$canvas.width() / 2, fb.$canvas.height() / 2);
+    fb.addTeamMate('tm9', fb.$canvas.width() / 2, fb.$canvas.height() / 2);
+    fb.addTeamMate('tm10', fb.$canvas.width() / 2, fb.$canvas.height() / 2);
+    fb.addTeamMate('tm11', fb.$canvas.width() / 2, fb.$canvas.height() / 2);
     fb.addOppornent('op1', fb.$canvas.width() / 2, fb.$canvas.height() / 2);
     fb.addOppornent('op2', fb.$canvas.width() / 2, fb.$canvas.height() / 2);
     fb.addOppornent('op3', fb.$canvas.width() / 2, fb.$canvas.height() / 2);
     fb.addOppornent('op4', fb.$canvas.width() / 2, fb.$canvas.height() / 2);
     fb.addOppornent('op5', fb.$canvas.width() / 2, fb.$canvas.height() / 2);
+    fb.addOppornent('op6', fb.$canvas.width() / 2, fb.$canvas.height() / 2);
+    fb.addOppornent('op7', fb.$canvas.width() / 2, fb.$canvas.height() / 2);
+    fb.addOppornent('op8', fb.$canvas.width() / 2, fb.$canvas.height() / 2);
+    fb.addOppornent('op9', fb.$canvas.width() / 2, fb.$canvas.height() / 2);
+    fb.addOppornent('op10', fb.$canvas.width() / 2, fb.$canvas.height() / 2);
+    fb.addOppornent('op11', fb.$canvas.width() / 2, fb.$canvas.height() / 2);
 
     // Move players to the initial position
     var program = new CanvasProgram();
     program.addTrack('tm1')
-    .addCommand({ x: "+=100", y: "+=50" }, 2000)
-    .addCommand({ x: "-=20", y: "-=100" }, 2000)
-    .addCommand({ x: "-=20", y: "-=100" }, 2000)
-    .addCommand({ x: "-=10", y: "-=100" }, 1000);
+    .addCommand({ x: "+=100", y: "+=40" }, 2000)
+    //.addCommand({ x: "-=20", y: "-=100" }, 2000)
+    //.addCommand({ x: "-=20", y: "-=100" }, 2000)
+    //.addCommand({ x: "-=10", y: "-=100" }, 1000);
     program.addTrack('tm2')
-    .addCommand({ x: "-=100", y: "+=50" }, 2000)
-    .addCommand({ x: "+=20", y: "-=100" }, 3000);
+    .addCommand({ x: "-=0", y: "+=20" }, 2000)
     program.addTrack('tm3')
-    .addCommand({ x: "+=100", y: "+=100" }, 2000)
-    .addCommand({ x: "+=20", y: "-=100" }, 3000);
+    .addCommand({ x: "-=100", y: "+=40" }, 2000)
+    //.addCommand({ x: "+=20", y: "-=100" }, 3000);
     program.addTrack('tm4')
-    .addCommand({ x: "-=100", y: "+=100" }, 2000)
-    .addCommand({ x: "+=20", y: "-=100" }, 3000);
+    .addCommand({ x: "+=60", y: "+=110" }, 2000)
+    //.addCommand({ x: "+=20", y: "-=100" }, 3000);
     program.addTrack('tm5')
-    .addCommand({ x: "+=0", y: "+=150" }, 2000)
-    .addCommand({ x: "+=20", y: "-=100" }, 3000);
+    .addCommand({ x: "-=0", y: "+=70" }, 2000)
+    program.addTrack('tm6')
+    .addCommand({ x: "-=60", y: "+=110" }, 2000)
+    //.addCommand({ x: "+=20", y: "-=100" }, 3000);
+    program.addTrack('tm7')
+    .addCommand({ x: "+=130", y: "+=150" }, 2000)
+    program.addTrack('tm8')
+    .addCommand({ x: "+=40", y: "+=160" }, 2000)
+    program.addTrack('tm9')
+    .addCommand({ x: "-=40", y: "+=160" }, 2000)
+    program.addTrack('tm10')
+    .addCommand({ x: "-=130", y: "+=150" }, 2000)
+    program.addTrack('tm11')
+    .addCommand({ x: "+=0", y: "+=220" }, 2000)
+    //.addCommand({ x: "+=20", y: "-=100" }, 3000);
     program.addTrack('op1')
-    .addCommand({ x: "+=100", y: "-=50" }, 2000);
+    .addCommand({ x: "+=100", y: "-=40" }, 2000)
     program.addTrack('op2')
-    .addCommand({ x: "-=100", y: "-=50" }, 2000);
+    .addCommand({ x: "-=0", y: "-=20" }, 2000)
     program.addTrack('op3')
-    .addCommand({ x: "+=100", y: "-=100" }, 2000);
+    .addCommand({ x: "-=100", y: "-=40" }, 2000)
     program.addTrack('op4')
-    .addCommand({ x: "-=100", y: "-=100" }, 2000);
+    .addCommand({ x: "+=60", y: "-=110" }, 2000)
     program.addTrack('op5')
-    .addCommand({ x: "+=0", y: "-=150" }, 2000);
+    .addCommand({ x: "-=0", y: "-=70" }, 2000)
+    program.addTrack('op6')
+    .addCommand({ x: "-=60", y: "-=110" }, 2000)
+    program.addTrack('op7')
+    .addCommand({ x: "+=130", y: "-=150" }, 2000)
+    program.addTrack('op8')
+    .addCommand({ x: "+=40", y: "-=160" }, 2000)
+    program.addTrack('op9')
+    .addCommand({ x: "-=40", y: "-=160" }, 2000)
+    program.addTrack('op10')
+    .addCommand({ x: "-=130", y: "-=150" }, 2000)
+    program.addTrack('op11')
+    .addCommand({ x: "+=0", y: "-=220" }, 2000)
 
     fb.log('Kick off!');
 
